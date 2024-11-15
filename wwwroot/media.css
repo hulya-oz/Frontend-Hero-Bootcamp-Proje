@@ -1,0 +1,96 @@
+
+
+@media(min-width: 991px) {
+    .navbar-toggler:focus, .btn-close:focus{
+        box-shadow: none;
+        outline: none;
+        
+        }
+    .navbar-nav .nav-link {
+        color: #515353;
+        text-decoration: none;
+        padding: 0 15px;
+        position: relative;
+        transition: color 0.3s ease;
+        }
+    
+    .navbar-nav .nav-link:hover {
+        color: #0089EC;
+        }
+    
+    /* Alt Çizgi Hover Efekti */
+    .navbar-nav .nav-link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #0089EC;
+        transition: width 0.3s ease;
+        }
+    
+    .navbar-nav .nav-link:hover::after {
+        width: 100%; /* Hover sırasında çizginin tam genişlemesi */
+        }
+    
+    }
+    @media (max-width: 990px) {
+        .contact-info {
+            display: none;
+        }
+    }
+    /* Küçük ekranlar (768px ve altı) için düzenlemeler */
+    @media (max-width: 768px) {
+        .card-gift-container {
+            justify-content: center;
+            padding-right: 0;
+            margin-top: 60px;
+        }
+    
+        .card-gift {
+            max-width: 100%;               
+            width: 100%;
+            justify-content: space-between; 
+        }
+    
+        .card-gift__title {
+            font-size: 14px;               
+        }
+    
+        .card-gift__subtitle {
+            display: inline;              
+            margin-top: 0;                  
+        }
+        .main-heading {
+            font-size: 24px;
+        }
+        .sub-heading {
+            font-size: 16px;
+        }
+        .large-card, .small-card {
+            width: 100%;
+        }
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr); /* Her satırda 2 kart */
+        }
+        .footer-links {
+            flex-direction: column;
+        }
+        .footer-column {
+            margin-bottom: 20px;
+        }
+       
+    }
+    @media (min-width: 768px) {
+        .container, .container-md, .container-sm {
+            max-width: 870px;
+            }
+    }
+    @media (max-width: 1024px) {
+        .services-grid {
+            grid-template-columns: repeat(4, 1fr); /* Her satırda 4 kart */
+        }
+    }
+    

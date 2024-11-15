@@ -1,0 +1,719 @@
+body{
+    background-color: #F5F7F9;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif !important;
+}
+.navbar {
+    transition: background-color 0.2s ease; /* Geçiş efekti */
+    background-color: #F8F9FA; /* Başlangıç rengi */
+}
+
+.navbar.scrolled {
+    background-color: white;
+}
+.app-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Sağ tarafa hizalar */
+}
+
+.help-text {
+    font-size: 0.9rem;
+    color: bl;
+    margin: 0; /* Varsayılan alt boşluğu kaldır */
+}
+
+.phone-number {
+    font-size: 1rem;
+    color: black;
+    margin: 0; /* Varsayılan alt boşluğu kaldır */
+    font-weight: 500;
+}
+
+.contact-info i {
+    color: #ffffff; /* Beyaz renk */
+    -webkit-text-stroke: 1px #000000; /* İnce siyah kenarlık */
+    margin-right: 8px;
+    font-size: 1.2rem;
+}  
+
+.login-button {
+    background-color: #0089EC;
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-family: "Inter", sans-serif !important;
+    text-decoration: none;
+    margin-left: 20px; /* Giriş yap butonunu sağa doğru kaydırır */
+}
+/* Kartın sağa hizalanması için ana container */
+.card-gift-container {
+    display: flex;
+    justify-content: flex-end; /* Kartı sağa hizalar */
+    margin-top: 80px; /* Navbar'ın altına boşluk eklemek için ayarlanabilir */
+    padding-right: 20px; /* Sağdan biraz boşluk ekleyerek kartı hizalar */
+}
+
+/* Card-Gift Stili */
+.card-gift {
+    background-color: #ffffff; /* Beyaz arka plan */
+    border-radius: 18px; /* Hafif yuvarlak köşeler */
+    padding: 5px 10px; /* İçerik kenar boşluğu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    display: inline-flex; /* Yalnızca içerik genişliğinde olmasını sağlar */
+    align-items: center; /* İçerik ortalanır */
+    position: absolute; /* Absolute konumlandırma */
+    right: 0; /* Sağa yasla */
+    margin-right: 15px;
+    margin-top: 15px;;
+}
+
+.card-gift__img {
+    width: 45px;
+    height: 45px;
+}
+img{
+    max-width: 100% ;
+}
+
+.card-gift__title {
+    flex: 1;
+    font-size: 13px;
+    font-weight: bold;
+    color: #515353;
+    justify-content: space-between;
+    padding: 12px;
+    float: right;
+}
+.card-gift__subtitle {
+    display: block;                 /* Alt başlığı yeni satıra alır */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card-gift__icon {
+    font-size: 20px;
+    color: #515353;
+    margin-left: auto;               /* İkonu en sağa iter */
+    align-self: center;              /* İkonun dikey ortalanmasını sağlar */
+}
+
+.main-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1D1E1E;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+    font-size: 18px;
+    color: #515353;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.cards-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: unset;
+    text-align: center;
+    flex-wrap: wrap;
+    
+    
+}
+.card {
+    background-color: #fff;
+    border: 0 solid #e0e0e0;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+    cursor: pointer;
+    flex-wrap: wrap;
+    transition: box-shadow 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 2px 6px rgba(62, 61, 61, 0.3); /* Gölge efekti */
+}
+.col-5-custom {
+    flex: 0 0 20%;   /* Her bir kartın genişliğini %20 yapar */
+    max-width: 20%;  /* En fazla %20 genişlik sınırı koyar */
+}
+
+.large-card {
+    width: 17rem;
+    height: 10rem;
+    margin: 0;
+    padding: 10px;
+    border-radius:16px;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+}
+.small-card {
+    width: 10rem;
+    height: 11.5rem;
+    margin: 0;
+    padding: 5px;
+    border-radius:16px;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+    
+}
+
+.card img {
+    width: 80x;
+    height: 80px;
+    margin: 0 auto px;
+    align-items:center;
+   
+}
+
+.card-title {
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s;    
+}
+.card-body:hover .card-title{
+    color: #0089EC;
+}
+
+.all-product {
+    color:#0000FF;
+    margin: 50px 75px;
+   
+}
+.second-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.policy {
+    margin-bottom: 100px; /* Başlık ile içerik arasındaki boşluk */
+    font-weight: 600;
+
+}
+
+.container-policy-buy {
+    display: flex;
+    justify-content: space-around; /* Divleri eşit aralıklı şekilde yan yana dizer */
+    gap: 1px; /* Divler arasındaki boşluk */
+    
+}
+
+.policy-buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* İçeriği yatay olarak ortalar */
+    text-align: center; /* Metni ortalar */
+    max-width: 300px; /* Divlerin genişliğini sınırlandırmak için */
+    
+}
+
+.policy-buy h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+.policy-buy p{
+    font-size: 14px;
+}
+/* Scroll animasyon bölümü için özel stil */
+.scroll-animation-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Yüksekliği tam ekran olacak şekilde */
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-text-container {
+    display: flex;
+    align-items: right;
+    gap: 200px;
+  
+}
+.phone {
+    order: 2;
+    position: relative;
+    width: 250px;
+    height: 500px;
+}
+
+.phone img {
+    width: 100%;
+    height: auto;
+}
+
+.screen-image {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 45%;
+    height: 5%;
+    transition: transform 0.3s ease;
+}
+
+.text-section {
+    order: 1;
+    max-width: 400px;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.text-section h3 {
+    margin-bottom: 50px;
+    font-weight: 600;
+    
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #515353;
+}
+.landing-title {
+    font-weight: 550;
+    margin-top: 100px;
+}
+/* Butonların container'ı */
+.button-container {
+    display: flex;
+    gap: 10px; /* Butonlar arasındaki boşluk */
+    flex-wrap: wrap;
+    justify-content: center; /* Responsive için ortalanmış */
+    margin: 20px 0; /* Üst ve alt boşluk */
+}
+/* Buton stili */
+.custom-button {
+    display: flex;
+    padding: 10px 20px;
+    color: #515353;
+    background-color: #Fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px; /* Köşelerin yumuşatılması */
+    border: none;
+}
+
+/* Hover efekti */
+.custom-button:hover {
+    background-color: #FAFAFA;
+    border-radius: 15px;
+}
+
+/* Tıklama efekti */
+.custom-button:focus {
+    border: 2px solid #0089EC;
+    border-radius: 15px;
+    color: #0089EC;
+    font-size: 14px;
+}
+.review-title {
+    margin-top: 120px;
+    text-align: center;
+    font-weight: 600;
+}
+.review-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.review-card{
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+    position: relative;
+    background-color: #fff;
+}
+
+.comment {
+    font-size: 16px;
+    color: #515353;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 14px;
+    color: #515353;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.price-section{
+    margin-top: 100px;
+    background-color: #fff;
+}
+
+
+.container-awards-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 150px 75px 150px;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #515353;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #515353;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-link {
+    font-size: 16px;
+    color: #0089EC;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.detail-link:hover {
+    text-decoration: underline;
+}
+
+.images-content {
+    display: flex;
+    gap: 5px;
+}
+
+.award-image {
+    width: 200px;
+    height: 250px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.insurance-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f8fc;
+}
+
+.insurance-section h4 {
+    color: #515353;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.insurance-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo-card {
+    width: 170px;
+    height: 130px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+    filter: grayscale(100%); /* Siyah-beyaz filtre */
+    transition: filter 0.1s ease; /* Geçiş efekti */
+}
+.logo-card:hover {
+    filter: none; /* Hover durumunda orijinal renk */
+}
+
+.logo-card img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.more-insurance {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    color:#0089EC;
+    text-decoration: none;
+    font-weight: 600;
+}
+.fas.fa-angle-down{
+    color: #0089EC;
+}
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f8fc;
+    padding: 150px;
+    border-radius: 10px;
+}
+
+.faq-title {
+    text-align: center;
+    color: black;
+    font-weight: 550;
+    margin-bottom: 65px;    
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px 30px;
+    font-size: 1.1em;
+    color: #515353;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding: 15px 20px;
+    font-size: 1em;
+    color: #515353;
+    border-top: 1px solid #eee;
+    display: none;
+}
+.services-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.services-header {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.services-subtext {
+    font-size: 1.2rem;
+    color: #515353;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Her satırda 6 kart */
+    gap: 10px; /* Kartlar arası boşluk */
+    max-width: 1200px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+    width: 160px;
+    height: 170px;
+}
+
+.service-card img {
+    width: 100px; /* İkon boyutu */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: black;
+    padding-top: 10px;
+    font-weight: 600;
+}
+/* Genel Footer Stili */
+.footer {
+    background-color: #fff !important;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #Fff !important;
+
+}
+
+/* Logo ve Ödüller Kısmı */
+.footer-logo-awards {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logos img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Linkler Kısmı */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-column ul li:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+
+.form-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form-box {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(197, 195, 195, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+.form-box p{
+    text-align: left;
+}
+.form-heading {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.form-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.6; 
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.recaptcha-placeholder {
+    display: flex;
+    justify-content: flex-start; /* Sol hizalama */
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    height: 60px ;
+    width:70%;
+}
+
+.recaptcha-text {
+    flex: 1;
+    text-align: left; /* Captcha metnini sola hizala */
+}
+
+.recaptcha-image {
+    width: 50px;
+    height: 50px;
+    margin-left: 70px; /* Görseli metinden ayırmak için boşluk */
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
